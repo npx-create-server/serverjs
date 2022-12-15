@@ -1,11 +1,11 @@
-exports.get = async (req, res, next) => {
+exports.getFunction = async (req, res, next) => {
     const { myparam } = req.params;
 
-    return res.json({ hello: 'world' });
+    return res.status(200).json({ hello: 'world' });
 };
 
-exports.post = async (req, res, next) => {
+exports.postFunction = async (req, res, next) => {
     const { mybody } = req.body;
 
-    return res.json({ body: myBody });
+    return res.status(200).json({ body: mybody });
 };
